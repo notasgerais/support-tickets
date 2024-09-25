@@ -15,7 +15,7 @@ st.write(
     """
 )
 
-disciplina = st.multiselect(
+disciplina = st.selectbox(
     "Selecione a Disciplina",
     ["Matemática", "Português", "Ciências", "Geografia", "História", "Inglês", "Espanhol", "Produção Textual", "Literatura" ]
 )
