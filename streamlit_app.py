@@ -86,7 +86,7 @@ if submitted:
             {
                 "ID": f"Q{recent_ticket_number+1}",
                 "Conteúdo": issue,
-                "Gabarito": gabarito,
+                "Gabarito": "A",  #"gabarito,
                 "Dificuldade": priority,
                 "Date Submitted": today,
             }
