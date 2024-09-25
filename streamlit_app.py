@@ -118,13 +118,13 @@ edited_df = st.data_editor(
         "Status": st.column_config.SelectboxColumn(
             "Status",
             help="Ticket status",
-            options=["Open", "In Progress", "Closed"],
+            options=["A","B","C", "D", "E", "Aberta"],
             required=True,
         ),
         "Priority": st.column_config.SelectboxColumn(
             "Priority",
             help="Priority",
-            options=["High", "Medium", "Low"],
+            options=["Fácil", "Média", "Difícil"],
             required=True,
         ),
     },
