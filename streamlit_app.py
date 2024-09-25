@@ -162,12 +162,12 @@ st.download_button(
    key='download-csv'
 )
 
-columns = edited.df.columns.values.tolist()
+columns = edited_df.columns.values.tolist()
 
 deletar = st.form_submit_button("Apagar Planilha")
 
 if deletar:
-    edited.df.drop(columns)
+    edited_df.drop(columns)
 
 # # Show some metrics and charts about the ticket.
 # st.header("Statistics")
