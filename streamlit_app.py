@@ -15,6 +15,11 @@ st.write(
     """
 )
 
+disciplina = st.multiselect(
+    "Selecione a Disciplina",
+    ["Matemática", "Português", "Ciências", "Geografia", "História", "Inglês", "Espanhol", "Produção Textual", "Literatura" ]
+)
+
 # Create a random Pandas dataframe with existing tickets.
 if "df" not in st.session_state:
 
@@ -140,7 +145,7 @@ edited_df = st.data_editor(
 #save = st.form_submit_button("Salvar Planilha")
 
 csv = edited_df.to_csv(index=False).encode('utf-8')
-disciplina = "Matematica"
+#disciplina = "Matematica"
 st.download_button(
    "Salvar Mapa de Conteúdos",
    csv,
