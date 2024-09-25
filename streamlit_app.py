@@ -122,7 +122,7 @@ edited_df = st.data_editor(
             required=True,
         ),
         "Priority": st.column_config.SelectboxColumn(
-            "Dificuldade,
+            "Dificuldade",
             help="Priority",
             options=["Fácil", "Média", "Difícil"],
             required=True,
