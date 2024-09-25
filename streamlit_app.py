@@ -72,7 +72,7 @@ st.header("Adicionar Questão")
 with st.form("add_ticket_form"):
     issue = st.text_area("Conteúdo da Questão")
     gabarito = st.selectbox("Gabarito", ["Aberta", "A", "B", "C", "D", "E"])
-    valor = st.number_input("Insira o valor da questão", value=None, placeholder="Decimal separado por ponto.")
+    valor = st.number_input("Insira o valor da questão", value=None)
     priority = st.selectbox("Dificuldade", ["Fácil", "Média", "Difícil"])
     submitted = st.form_submit_button("Adicionar")
 
