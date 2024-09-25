@@ -72,7 +72,7 @@ st.header("Adicionar Questão")
 # in a form, the app will only rerun once the submit button is pressed.
 with st.form("add_ticket_form"):
     issue = st.text_area("Describe the issue")
-    priority = st.selectbox("Priority", ["High", "Medium", "Low"])
+    priority = st.selectbox("Priority", ["Fácil", "Média", "Difícil"])
     submitted = st.form_submit_button("Submit")
 
 if submitted:
@@ -84,9 +84,9 @@ if submitted:
         [
             {
                 "ID": f"TICKET-{recent_ticket_number+1}",
-                "Issue": issue,
-                "Status": "Open",
-                "Priority": priority,
+                "Conteúdo": issue,
+                "Gabarito": "Open",
+                "Dificuldade": priority,
                 "Date Submitted": today,
             }
         ]
