@@ -71,10 +71,10 @@ st.header("Adicionar Questão")
 # We're adding tickets via an `st.form` and some input widgets. If widgets are used
 # in a form, the app will only rerun once the submit button is pressed.
 with st.form("add_ticket_form"):
-    issue = st.text_area("Describe the issue")
+    issue = st.text_area("Conteúdo da Questão")
     gabarito =  st.selectbox("Gabarito", ["A","B","C", "D", "E", "Aberta"]),
     priority = st.selectbox("Priority", ["Fácil", "Média", "Difícil"])
-    submitted = st.form_submit_button("Submit")
+    submitted = st.form_submit_button("Adicionar")
 
 if submitted:
     # Make a dataframe for the new ticket and append it to the dataframe in session
@@ -116,13 +116,13 @@ edited_df = st.data_editor(
     hide_index=True,
     column_config={
         "Status": st.column_config.SelectboxColumn(
-            "Status",
+            "Gabarito",
             help="Ticket status",
             options=["A","B","C", "D", "E", "Aberta"],
             required=True,
         ),
         "Priority": st.column_config.SelectboxColumn(
-            "Priority",
+            "Dificuldade,
             help="Priority",
             options=["Fácil", "Média", "Difícil"],
             required=True,
