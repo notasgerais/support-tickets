@@ -50,7 +50,7 @@ if "df" not in st.session_state:
         "ID": [f"Q{i}" for i in range(1, 1, 1)],
         "Conteúdo": np.random.choice(issue_descriptions, size=0),
         "Gabarito": np.random.choice(["Aberta", "A", "B", "C", "D", "E"], size=0),
-        "Valor": 0.0
+        "Valor": 0.0,
         "Dificuldade": np.random.choice(["Fácil", "Média", "Difícil"], size=0),
         # "Date Submitted": [
         #     datetime.date(2023, 6, 1) + datetime.timedelta(days=random.randint(0, 182))
