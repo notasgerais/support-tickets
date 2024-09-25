@@ -117,7 +117,7 @@ st.info(
 edited_df = st.data_editor(
     st.session_state.df,
     use_container_width=True,
-    hide_index=True,
+    hide_index=False,
     column_config={
         "Status": st.column_config.SelectboxColumn(
             "Gabarito",
