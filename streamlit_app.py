@@ -56,7 +56,7 @@ if "df" not in st.session_state:
         # "Date Submitted": [
         #     datetime.date(2023, 6, 1) + datetime.timedelta(days=random.randint(0, 182))
         #     for _ in range(1)
-        ],
+        # ],
     }
     df = pd.DataFrame(data)
 
