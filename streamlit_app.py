@@ -53,9 +53,9 @@ if "df" not in st.session_state:
         "Conteúdo": np.random.choice(issue_descriptions, size=1),
         "Gabarito": np.random.choice(["A","B","C", "D", "E", "Aberta"], size=1),
         "Dificuldade": np.random.choice(["Fácil", "Média", "Difícil"], size=1),
-        "Date Submitted": [
-            datetime.date(2023, 6, 1) + datetime.timedelta(days=random.randint(0, 182))
-            for _ in range(1)
+        # "Date Submitted": [
+        #     datetime.date(2023, 6, 1) + datetime.timedelta(days=random.randint(0, 182))
+        #     for _ in range(1)
         ],
     }
     df = pd.DataFrame(data)
@@ -88,7 +88,7 @@ if submitted:
                 "Conteúdo": issue,
                 "Gabarito": "A",  #"gabarito,
                 "Dificuldade": priority,
-                "Date Submitted": today,
+                # "Date Submitted": today,
             }
         ]
     )
@@ -129,7 +129,7 @@ edited_df = st.data_editor(
         ),
     },
     # Disable editing the ID and Date Submitted columns.
-    disabled=["ID", "Date Submitted"],
+    disabled=["ID"],
 )
 
 # # Show some metrics and charts about the ticket.
