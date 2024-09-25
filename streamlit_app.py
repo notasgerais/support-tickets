@@ -104,7 +104,7 @@ st.write(f"Número de Questões: `{len(st.session_state.df)}`")
 
 st.info(
     "Você pode editar o conteúdo, o gabarito e a dificuldade das questões clicando duas vezes"
-    "na célula correspondente!
+    "na célula correspondente!"
     icon="✍️",
 )
 
