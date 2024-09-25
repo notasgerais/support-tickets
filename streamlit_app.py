@@ -51,7 +51,7 @@ if "df" not in st.session_state:
     data = {
         "ID": [f"Q{i}" for i in range(1, 2, 1)],
         "Conteúdo": np.random.choice(issue_descriptions, size=1),
-        "Gabarito": np.random.choice(["A","B","C", "D", "E", "Aberta"], size=1),
+        "Gabarito": np.random.choice(["Aberta", "A","B","C", "D", "E"], size=1),
         "Dificuldade": np.random.choice(["Fácil", "Média", "Difícil"], size=1),
         # "Date Submitted": [
         #     datetime.date(2023, 6, 1) + datetime.timedelta(days=random.randint(0, 182))
@@ -72,7 +72,7 @@ st.header("Adicionar Questão")
 # in a form, the app will only rerun once the submit button is pressed.
 with st.form("add_ticket_form"):
     issue = st.text_area("Conteúdo da Questão")
-    gabarito =  st.selectbox("Gabarito", ["A","B","C", "D", "E", "Aberta"]),
+    gabarito =  st.selectbox("Gabarito", ["Aberta", "A","B","C", "D", "E"]),
     priority = st.selectbox("Priority", ["Fácil", "Média", "Difícil"])
     submitted = st.form_submit_button("Adicionar")
 
@@ -86,7 +86,7 @@ if submitted:
             {
                 "ID": f"Q{recent_ticket_number+1}",
                 "Conteúdo": issue,
-                "Gabarito": "A",  #"gabarito,
+                "Gabarito": gabarito,
                 "Dificuldade": priority,
                 # "Date Submitted": today,
             }
