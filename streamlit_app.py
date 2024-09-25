@@ -134,7 +134,7 @@ edited_df = st.data_editor(
         ),
     },
     # Disable editing the ID and Date Submitted columns.
-    disabled=["ID"],
+    #disabled=["ID"],
 )
 
 #save = st.form_submit_button("Salvar Planilha")
