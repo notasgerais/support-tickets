@@ -140,7 +140,7 @@ disciplina = "Matematica"
 st.download_button(
    "Salvar Mapa de Conteúdos",
    csv,
-   f'{disciplina}".csv",
+   f'{disciplina}.csv',
    "text/csv",
    key='download-csv'
 )
