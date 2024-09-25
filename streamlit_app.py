@@ -116,7 +116,7 @@ st.info(
 # cells. The edited data is returned as a new dataframe.
 edited_df = st.data_editor(
     st.session_state.df,
-    num_rows="dynamic",
+    #num_rows="dynamic",
     use_container_width=True,
     hide_index=True,
     column_config={
