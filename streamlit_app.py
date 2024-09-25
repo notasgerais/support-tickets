@@ -72,7 +72,7 @@ st.header("Adicionar Questão")
 # in a form, the app will only rerun once the submit button is pressed.
 with st.form("add_ticket_form"):
     issue = st.text_area("Describe the issue")
-    Gabarito =  st.selectbox(["A","B","C", "D", "E", "Aberta"]),
+    Gabarito =  st.selectbox("Gabarito", ["A","B","C", "D", "E", "Aberta"]),
     priority = st.selectbox("Priority", ["Fácil", "Média", "Difícil"])
     submitted = st.form_submit_button("Submit")
 
