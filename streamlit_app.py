@@ -8,12 +8,10 @@ import streamlit as st
 
 # Show app title and description.
 st.set_page_config(page_title="Support tickets", page_icon="🎫")
-st.title("🎫 Support tickets")
+st.title("🎫 Tabela de Contúdos")
 st.write(
     """
-    This app shows how you can build an internal tool in Streamlit. Here, we are 
-    implementing a support ticket workflow. The user can create a ticket, edit 
-    existing tickets, and view some statistics.
+    Aplicativo para criação de Mapa de Conteúdos das avaliações.
     """
 )
 
