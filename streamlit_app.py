@@ -114,20 +114,20 @@ edited_df = st.data_editor(
     st.session_state.df,
     use_container_width=True,
     hide_index=True,
-    column_config={
-        "Status": st.column_config.SelectboxColumn(
-            "Status",
-            help="Ticket status",
-            options=["A","B","C", "D", "E", "Aberta"],
-            required=True,
-        ),
-        "Priority": st.column_config.SelectboxColumn(
-            "Priority",
-            help="Priority",
-            options=["Fácil", "Média", "Difícil"],
-            required=True,
-        ),
-    },
+    # column_config={
+    #     "Status": st.column_config.SelectboxColumn(
+    #         "Status",
+    #         help="Ticket status",
+    #         options=["A","B","C", "D", "E", "Aberta"],
+    #         required=True,
+    #     ),
+    #     "Priority": st.column_config.SelectboxColumn(
+    #         "Priority",
+    #         help="Priority",
+    #         options=["Fácil", "Média", "Difícil"],
+    #         required=True,
+    #     ),
+    # },
     # Disable editing the ID and Date Submitted columns.
     disabled=["ID", "Date Submitted"],
 )
