@@ -164,7 +164,7 @@ st.download_button(
 
 columns = edited_df.columns.values.tolist()
 
-deletar = st.form_submit_button("Apagar Planilha")
+deletar = st.button("Apagar Planilha")
 
 if deletar:
     edited_df.drop(columns)
