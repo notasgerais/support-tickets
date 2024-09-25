@@ -167,7 +167,7 @@ columns = edited_df.columns.values.tolist()
 deletar = st.button("Apagar Planilha")
 
 if deletar:
-    edited_df.drop(columns)
+    edited_df.drop(columns, axis=1)
 
 # # Show some metrics and charts about the ticket.
 # st.header("Statistics")
