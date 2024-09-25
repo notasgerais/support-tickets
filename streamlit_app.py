@@ -96,11 +96,11 @@ if submitted:
     # Show a little success message.
     st.write("Ticket submitted! Here are the ticket details:")
     st.dataframe(df_new, use_container_width=True, hide_index=True)
-    st.session_state.df = pd.concat([df_new, st.session_state.df], axis=0)
+    st.session_state.df = pd.concat([ st.session_state.df,df_new], axis=0)
 
 # Show section to view and edit existing tickets in a table.
 st.header("Existing tickets")
-st.write(f"Number of tickets: `{len(st.session_state.df)}`")
+st.write(f"Número de Questões: `{len(st.session_state.df)}`")
 
 st.info(
     "You can edit the tickets by double clicking on a cell. Note how the plots below "
