@@ -78,12 +78,12 @@ with st.form("add_ticket_form"):
 if submitted:
     # Make a dataframe for the new ticket and append it to the dataframe in session
     # state.
-    recent_ticket_number = int(max(st.session_state.df.ID).split("-")[1])
+    recent_ticket_number = int(max(st.session_state.df.ID).split("Q")[-1])
     today = datetime.datetime.now().strftime("%m-%d-%Y")
     df_new = pd.DataFrame(
         [
             {
-                "ID": f"TICKET-{recent_ticket_number+1}",
+                "ID": f"Q{recent_ticket_number+1}",
                 "Conteúdo": issue,
                 "Gabarito": "Open",
                 "Dificuldade": priority,
