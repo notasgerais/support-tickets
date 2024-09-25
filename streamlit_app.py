@@ -50,6 +50,7 @@ if "df" not in st.session_state:
         "ID": [f"Q{i}" for i in range(1, 1, 1)],
         "Conteúdo": np.random.choice(issue_descriptions, size=0),
         "Gabarito": np.random.choice(["Aberta", "A", "B", "C", "D", "E"], size=0),
+        "Valor": np.random.choice([1, 2], size=0)
         "Dificuldade": np.random.choice(["Fácil", "Média", "Difícil"], size=0),
         # "Date Submitted": [
         #     datetime.date(2023, 6, 1) + datetime.timedelta(days=random.randint(0, 182))
@@ -71,6 +72,7 @@ st.header("Adicionar Questão")
 with st.form("add_ticket_form"):
     issue = st.text_area("Conteúdo da Questão")
     gabarito = st.selectbox("Gabarito", ["Aberta", "A", "B", "C", "D", "E"])
+    valor = st.number_input("Insira o valor da questão", value=None, placeholder="Decimal separado por ponto.")
     priority = st.selectbox("Dificuldade", ["Fácil", "Média", "Difícil"])
     submitted = st.form_submit_button("Adicionar")
 
@@ -88,6 +90,7 @@ if submitted:
                 "ID": f"Q{recent_ticket_number+1}",
                 "Conteúdo": issue,
                 "Gabarito": gabarito,
+                "Valor": valor,
                 "Dificuldade": priority,
                 # "Date Submitted": today,
             }
