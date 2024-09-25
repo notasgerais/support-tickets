@@ -79,7 +79,10 @@ with st.form("add_ticket_form"):
 if submitted:
     # Make a dataframe for the new ticket and append it to the dataframe in session
     # state.
-    recent_ticket_number = int(max(st.session_state.df.ID).split("Q")[-1])
+    if st.session_state.df.isempty():
+        recent_ticket_number = 0
+    else:  
+        recent_ticket_number = int(max(st.session_state.df.ID).split("Q")[-1])
     today = datetime.datetime.now().strftime("%m-%d-%Y")
     df_new = pd.DataFrame(
         [
