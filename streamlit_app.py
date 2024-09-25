@@ -20,6 +20,11 @@ disciplina = st.selectbox(
     ["Matemática", "Português", "Ciências", "Geografia", "História", "Inglês", "Espanhol", "Produção Textual", "Literatura" ]
 )
 
+turma = st.selectbox(
+    "Selecione a Turma",
+    ["6º Ano", "7º Ano", "8º Ano", "9º Ano", "1ª Série", "2ª Série", "3ª Série"]
+)
+
 # Create a random Pandas dataframe with existing tickets.
 if "df" not in st.session_state:
 
@@ -149,7 +154,7 @@ csv = edited_df.to_csv(index=False).encode('utf-8')
 st.download_button(
    "Salvar Mapa de Conteúdos",
    csv,
-   f'{disciplina}.csv',
+   f'{disciplina}_{turma}.csv',
    "text/csv",
    key='download-csv'
 )
