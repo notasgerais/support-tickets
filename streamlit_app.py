@@ -167,7 +167,7 @@ columns = edited_df.columns.values.tolist()
 deletar = st.button("Apagar Planilha")
 
 if deletar:
-    edited_df
+    #edited_df
     st.session_state.df = pd.DataFrame(None)
     
 
