@@ -107,7 +107,7 @@ st.header("Lista de Questões Adicionadas")
 st.write(f"Número de Questões: `{len(st.session_state.df)}`")
 
 st.info(
-    "Você pode editar o conteúdo, o gabarito e a dificuldade das questões clicando duas vezes"
+    "Você pode editar o conteúdo, o gabarito, o valor e a dificuldade das questões clicando duas vezes"
     " na célula correspondente!",
     icon="✍️",
 )
