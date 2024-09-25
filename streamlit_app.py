@@ -115,7 +115,7 @@ if submitted:
 # Show section to view and edit existing tickets in a table.
 st.header("Lista de Questões Adicionadas")
 st.write(f"Número de Questões: `{len(st.session_state.df)}`")
-st.write(f"Valor Total das Questões: `{st.session_state.df.Valor.sum()}`")
+
 
 st.info(
     "Você pode editar o conteúdo, o gabarito, o valor e a dificuldade das questões clicando duas vezes"
@@ -147,6 +147,8 @@ edited_df = st.data_editor(
     # Disable editing the ID and Date Submitted columns.
     #disabled=["ID"],
 )
+
+st.write(f"Valor Total das Questões: `{st.edited_df.Valor.sum()}`")
 
 #save = st.form_submit_button("Salvar Planilha")
 
