@@ -168,7 +168,7 @@ deletar = st.button("Apagar Planilha")
 
 if deletar:
     edited_df
-    edited_df = pd.DataFrame(None)
+    st.session_state.df = pd.DataFrame(None)
     
 
 # # Show some metrics and charts about the ticket.
