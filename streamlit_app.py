@@ -136,11 +136,11 @@ edited_df = st.data_editor(
 #save = st.form_submit_button("Salvar Planilha")
 
 csv = edited_df.to_csv(index=False).encode('utf-8')
-
+disciplina = "Matematica"
 st.download_button(
-   "Press to Download",
+   "Salvar Mapa de Conteúdos",
    csv,
-   "file.csv",
+   f'{disciplina}".csv",
    "text/csv",
    key='download-csv'
 )
