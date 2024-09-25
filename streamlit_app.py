@@ -82,7 +82,7 @@ if submitted:
     if len(st.session_state.df)==0:
         recent_ticket_number = 0
     else:  
-        recent_ticket_number = int(max(st.session_state.df.ID).split("Q")[-1])
+        recent_ticket_number = len(st.session_state.df)
     today = datetime.datetime.now().strftime("%m-%d-%Y")
     df_new = pd.DataFrame(
         [
