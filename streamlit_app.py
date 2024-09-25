@@ -49,10 +49,10 @@ if "df" not in st.session_state:
 
     # Generate the dataframe with 100 rows/tickets.
     data = {
-        "ID": [f"TICKET-{i}" for i in range(1100, 1000, -1)],
-        "Issue": np.random.choice(issue_descriptions, size=100),
-        "Status": np.random.choice(["Open", "In Progress", "Closed"], size=100),
-        "Priority": np.random.choice(["High", "Medium", "Low"], size=100),
+        "ID": [f"Q{i}" for i in range(1, 1, 1)],
+        "Conteúdo": np.random.choice(issue_descriptions, size=100),
+        "Gabarito": np.random.choice(["Open", "In Progress", "Closed"], size=100),
+        "Dificuladade": np.random.choice(["Fácil", "Média", "Difícil"], size=100),
         "Date Submitted": [
             datetime.date(2023, 6, 1) + datetime.timedelta(days=random.randint(0, 182))
             for _ in range(100)
