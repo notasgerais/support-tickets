@@ -115,6 +115,8 @@ if submitted:
 # Show section to view and edit existing tickets in a table.
 st.header("Lista de Questões Adicionadas")
 st.write(f"Número de Questões: `{len(st.session_state.df)}`")
+st.write(f"Disciplina: `{disciplina}`")
+st.write(f"Turma: `{turma}`")
 
 
 st.info(
