@@ -8,7 +8,7 @@ import streamlit as st
 
 # Show app title and description.
 st.set_page_config(page_title="Support tickets", page_icon="🎫")
-st.title("🎫 Tabela de Conteúdos")
+st.title("🎫 Mapa de Conteúdos")
 st.write(
     """
     Aplicativo para criação de Mapa de Conteúdos das avaliações.
